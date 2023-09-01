@@ -1,19 +1,19 @@
-const Recipe = ({cakeName, ingredients, price, rating }) => {
+const Recipe = ({recipe }) => {
 
 
 return(<div className="recipe">
 
-    <h3>{cakeName}</h3>
+    <h3>{recipe.cakeName}</h3>
     <h4>ingredients</h4>
     <ul>
 
-    {ingredients.map((ingredient, index) => (
+    {recipe.ingredients.map((ingredient, index) => (
           <li key={index}>{ingredient}</li>
         ))}
 
     </ul>
-    <p> price - {price}</p>
-    <p> rating - {rating}</p>
+    <p> price - {recipe.price}</p>
+    <p> rating - {recipe.rating}</p>
 
         </div> )
 }
