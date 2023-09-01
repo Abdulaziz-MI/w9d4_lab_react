@@ -17,7 +17,8 @@ const RecipesContainer = () =>{
           "strong tea",
         ],  
         price:5,
-        rating: 5
+        rating: 5,
+        imgSrc: "/images/victoria_cake.jpg"
       })
 
 
@@ -32,7 +33,8 @@ const RecipesContainer = () =>{
           "strong tea",
         ],
           price:2,
-          rating:3
+          rating:3, 
+          imgSrc: "/images/tea_loaf.jpg"
     })
 
     const [carrotCake, setCarrotCake] = useState({
@@ -47,20 +49,22 @@ const RecipesContainer = () =>{
             "sugar",
           ],
           price:8,
-          rating:5
+          rating:5,
+          imgSrc: "/images/carrot_cake.jpg"
     })
 
-    return(<div className="recipesContainer">
+    return(
+    <><div className="recipesContainer">
         
       <Recipe recipe={victoriaSponge} />
       <Recipe recipe = {teaLoaf} />
       <Recipe recipe = {carrotCake} />
-      
-        <h4> 
+      </div>
+        <h3> 
         Average rating - {(victoriaSponge.rating + teaLoaf.rating + carrotCake.rating) / 3}
-        </h4>
-
-    </div>)
+        </h3>
+</>
+   )
 }
 
 export default RecipesContainer;
